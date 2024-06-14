@@ -3,7 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MemoryGameTestDemo.MainPage">
 
-    <ScrollView>
+    <!--Main layout-->
+    <VerticalStackLayout Background="White">
+        
+        <!--Title and player selection-->
+        <Frame BackgroundColor="White">
+            <VerticalStackLayout>
+                <Label TextColor="Black"
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       Margin="10"
+                       Text="Gotta Match 'Em All!" />
+                <Label FontSize="Body"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Text="Please select number of players:" />
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <RadioButton x:Name="RadioButtonOnePlayer"
+                                 HorizontalOptions="Start"
+                                 TextColor="Black"
+                                 IsChecked="True"
+                                 Content="1 Player" />
+                    <RadioButton x:Name="RadioButtonTwoPlayers"
+                                 TextColor="Black"
+                                 HorizontalOptions="End"
+                                 Content="2 Players" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+
+        <!--This keeps track of the number of turns-->
+        <Frame BackgroundColor="White">
+            <HorizontalStackLayout>
+                <Label Text="Number of Turns:"
+                       TextColor="Black" />
+                <Label x:Name="LabelNumberOfTurns"
+                       TextColor="Black" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Grid>
+            <!--Put all of our cards here-->
+        </Grid>
+
+        <Button x:Name="ButtonShuffle"/>
+
+    </VerticalStackLayout>
+
+    <!--Delete all of this-->
+    <!--<ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
@@ -31,6 +81,6 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
-    </ScrollView>
+    </ScrollView>-->
 
 </ContentPage>
