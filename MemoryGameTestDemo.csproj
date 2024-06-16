@@ -57,15 +57,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\eevee.png" />
-	  <None Remove="Resources\Images\gardevoir.png" />
-	  <None Remove="Resources\Images\gengar.png" />
-	  <None Remove="Resources\Images\pikachu.png" />
-	  <None Remove="Resources\Images\totodile.png" />
-	  <None Remove="Resources\Images\toxapex.png" />
-	  <None Remove="Resources\Images\typhlosion.png" />
-	  <None Remove="Resources\Images\umbreon.png" />
-	  <None Remove="Resources\Images\umbreon_icon.png" />
+		<None Remove="Resources\Images\eevee.png" />
+		<None Remove="Resources\Images\gardevoir.png" />
+		<None Remove="Resources\Images\gengar.png" />
+		<None Remove="Resources\Images\pikachu.png" />
+		<None Remove="Resources\Images\totodile.png" />
+		<None Remove="Resources\Images\toxapex.png" />
+		<None Remove="Resources\Images\typhlosion.png" />
+		<None Remove="Resources\Images\umbreon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
