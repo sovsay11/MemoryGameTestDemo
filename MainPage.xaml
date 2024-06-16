@@ -3,9 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MemoryGameTestDemo.MainPage">
 
+    <!--Creates a custom template for radio buttons-->
+    <!--<ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Border BackgroundColor="#F3F2F1"
+                    HeightRequest="20"
+                    HorizontalOptions="Center"
+                    Stroke="#F3F2F1"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="2"
+                    VerticalOptions="Center"
+                    WidthRequest="20">
+                <Grid WidthRequest="20">
+                    <Grid HeightRequest="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                          WidthRequest="18">
+                        <Ellipse Fill="White"
+                                 HeightRequest="15"
+                                 HorizontalOptions="Center"
+                                 Stroke="Blue"
+                                 VerticalOptions="Center"
+                                 WidthRequest="15" />
+                        <Ellipse x:Name="check"
+                                 Fill="Blue"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 WidthRequest="8" />
+                    </Grid>
+                    <ContentPresenter />
+                </Grid>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="Stroke"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                    <Setter Property="Stroke"
+                                            Value="#F3F2F1" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Border>
+        </ControlTemplate>
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>-->
+
     <!--Main layout-->
     <VerticalStackLayout Background="White">
-        
+
         <!--Title and player selection-->
         <Frame BackgroundColor="White">
             <VerticalStackLayout>
@@ -44,11 +109,229 @@
             </HorizontalStackLayout>
         </Frame>
 
-        <Grid>
-            <!--Put all of our cards here-->
+        <!--Create the main grid for all the cards-->
+        <Grid x:Name="GridCards"
+              HorizontalOptions="Center"
+              HeightRequest="400"
+              WidthRequest="400"
+              Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--#region Card Section-->
+            <!--Card 1, remember to generate the click event for this first-->
+            <Frame Grid.Row="0"
+                   Grid.Column="0"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card1"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 2-->
+            <Frame Grid.Row="0"
+                   Grid.Column="1"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card2"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 3-->
+            <Frame Grid.Row="0"
+                   Grid.Column="2"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card3"
+                             ClassId="0"
+                             Margin="1"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 4-->
+            <Frame Grid.Row="0"
+                   Grid.Column="3"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card4"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 5-->
+            <Frame Grid.Row="1"
+                   Grid.Column="0"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card5"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 6-->
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card6"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 7-->
+            <Frame Grid.Row="1"
+                   Grid.Column="2"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card7"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 8-->
+            <Frame Grid.Row="1"
+                   Grid.Column="3"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card8"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 9-->
+            <Frame Grid.Row="2"
+                   Grid.Column="0"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card9"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 10-->
+            <Frame Grid.Row="2"
+                   Grid.Column="1"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card10"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 11-->
+            <Frame Grid.Row="2"
+                   Grid.Column="2"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card11"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 12-->
+            <Frame Grid.Row="2"
+                   Grid.Column="3"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card12"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 13-->
+            <Frame Grid.Row="3"
+                   Grid.Column="0"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card13"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 14-->
+            <Frame Grid.Row="3"
+                   Grid.Column="1"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card14"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 15-->
+            <Frame Grid.Row="3"
+                   Grid.Column="2"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card15"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--Card 16-->
+            <Frame Grid.Row="3"
+                   Grid.Column="3"
+                   Padding="0"
+                   BorderColor="Black">
+                <ImageButton x:Name="Card16"
+                             ClassId="0"
+                             Margin="1"
+                             BackgroundColor="White"
+                             Clicked="CardButton_Clicked" />
+            </Frame>
+
+            <!--#endregion-->
         </Grid>
 
-        <Button x:Name="ButtonShuffle"/>
+        <Button x:Name="ButtonShuffle"
+                Text="Shuffle Board"
+                TextColor="Black"
+                BackgroundColor="White"
+                Margin="10"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="10"
+                Clicked="ButtonShuffle_Clicked" />
 
     </VerticalStackLayout>
 

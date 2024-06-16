@@ -8,6 +8,16 @@
             InitializeComponent();
         }
 
+        private void CardButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonShuffle_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
         // remove this
         ////private void OnCounterClicked(object sender, EventArgs e)
         ////{
